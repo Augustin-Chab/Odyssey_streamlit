@@ -27,7 +27,7 @@ st.pyplot(viz_correlation.figure)
 st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas d'évolution significative sur le nombre de cylindre, la cylindré, et la puissance du moteur (hp). En revanche")
 
 # pivot table for mean by hp evolution
-pt = pd.pivot_table(df, index = 'year', values = 'hp', aggfunc = 'mean')
+pt = pd.pivot_table(df_continent, index = 'year', values = 'hp', aggfunc = 'mean')
 pt['year'] = pt.index
 
 # Evolution de la puissance moyenne du moteur
@@ -39,7 +39,7 @@ viz = sns.barplot(data = pt, x = pt.year, y = pt.hp, color ="blue")
 st.pyplot(viz.figure)
 
 # pivot table for mean by cubicinches evolution
-pt_1 = pd.pivot_table(df, index = 'year', values = 'cubicinches', aggfunc = 'mean')
+pt_1 = pd.pivot_table(df_continent, index = 'year', values = 'cubicinches', aggfunc = 'mean')
 pt_1['year'] = pt.index
 
 # Evolution de la cylindré moyenne 
@@ -51,7 +51,7 @@ viz_1 = sns.barplot(data = pt_1, x = pt.year, y = pt_1.cubicinches, color ="blue
 st.pyplot(viz_1.figure)
 
 # pivot table for mean by weightlbs evolution
-pt_2 = pd.pivot_table(df, index = 'year', values = 'weightlbs', aggfunc = 'mean')
+pt_2 = pd.pivot_table(df_continent, index = 'year', values = 'weightlbs', aggfunc = 'mean')
 pt_2['year'] = pt.index
 
 # Evolution du poids moyen
@@ -63,7 +63,7 @@ viz_2 = sns.barplot(data = pt_2, x = pt.year, y = pt_2.weightlbs, color ="blue")
 st.pyplot(viz_2.figure)
 
 # pivot table for mean by time-to-60 evolution
-pt_3 = pd.pivot_table(df, index = 'year', values = 'time-to-60', aggfunc = 'mean')
+pt_3 = pd.pivot_table(df_continent, index = 'year', values = 'time-to-60', aggfunc = 'mean')
 pt_3['year'] = pt.index
 
 # Evolution du time to 60 moyen
