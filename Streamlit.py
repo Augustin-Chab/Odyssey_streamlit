@@ -40,7 +40,7 @@ viz = sns.barplot(data = pt, x = pt.year, y = pt.hp, color = "steelblue")
 
 st.pyplot(viz.figure)
 
-continent_1 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
+continent_1 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'), key = 1)
 
 df_continent_1 = df.loc[df.continent == continent_1]
 
@@ -58,7 +58,7 @@ viz_1 = sns.barplot(data = pt_1, x = pt.year, y = pt_1.cubicinches, color = "ste
 
 st.pyplot(viz_1.figure)
 
-continent_2 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
+continent_2 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'), key = 2)
 
 df_continent_2 = df.loc[df.continent == continent_2]
 
@@ -76,7 +76,7 @@ viz_2 = sns.barplot(data = pt_2, x = pt.year, y = pt_2.weightlbs, ccolor = "stee
 
 st.pyplot(viz_2.figure)
 
-continent_3 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
+continent_3 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'), key = 3)
 
 df_continent_3 = df.loc[df.continent == continent_3]
 
