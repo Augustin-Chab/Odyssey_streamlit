@@ -5,7 +5,7 @@ import numpy as np
 
 st.title("Analyse sur l'évolution des performances mécanique par continent", anchor=None)
 
-continent = st.selectbox(label = 'Choisi un pays', (' Europe.', ' US.', ' Japan.'))
+continent = st.selectbox('Choisi un pays', (' Europe.', ' US.', ' Japan.'))
 
 st.write('You selected:', option)
 
