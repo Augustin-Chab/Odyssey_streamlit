@@ -12,7 +12,7 @@ st.subheader(continent)
 
 df = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv')
 
-df_continent = df.loc[df.continent = continent]
+df_continent = df.loc[df.continent == continent]
 
 st.subheader('Heatmap')
 
