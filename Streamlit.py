@@ -67,7 +67,7 @@ pt_3['year'] = pt.index
 # Evolution du time to 60 moyen
 sns.set()
 plt.figure(figsize = (20, 10))
-plt.title('Evolution du time to 60 moyen', size = 20))
+plt.title('Evolution du time to 60 moyen', size = 20)
 viz_3 = sns.barplot(data = pt_3, x = pt.year, y = pt_3['time-to-60'], color ="blue")
 
 st.pyplot(viz_3.figure)
