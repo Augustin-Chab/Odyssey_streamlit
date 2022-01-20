@@ -50,7 +50,7 @@ pt_1['year'] = pt.index
 sns.set()
 plt.figure(figsize = (20, 10))
 plt.title('Evolution de la cylindré moyenne', size = 20)
-viz_1 = sns.barplot(data = pt_1, x = pt.year, y = pt_1.cubicinches, color = "steelblue")
+viz_1 = sns.barplot(data = pt_1, x = pt_1.year, y = pt_1.cubicinches, color = "steelblue")
 
 st.pyplot(viz_1.figure)
 
@@ -64,7 +64,7 @@ pt_2['year'] = pt.index
 sns.set()
 plt.figure(figsize = (20, 10))
 plt.title('Evolution du poids moyen', size = 20)
-viz_2 = sns.barplot(data = pt_2, x = pt.year, y = pt_2.weightlbs, ccolor = "steelblue")
+viz_2 = sns.barplot(data = pt_2, x = pt_2.year, y = pt_2.weightlbs, ccolor = "steelblue")
 
 st.pyplot(viz_2.figure)
 
@@ -78,6 +78,6 @@ pt_3['year'] = pt.index
 sns.set()
 plt.figure(figsize = (20, 10))
 plt.title('Evolution du time to 60 moyen', size = 20)
-viz_3 = sns.barplot(data = pt_3, x = pt.year, y = pt_3['time-to-60'], color = "steelblue")
+viz_3 = sns.barplot(data = pt_3, x = pt_3.year, y = pt_3['time-to-60'], color = "steelblue")
 
 st.pyplot(viz_3.figure)
