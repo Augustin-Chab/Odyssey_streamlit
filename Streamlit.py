@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 
 st.title("Analyse sur l'évolution des performances mécanique par continent")
 
-st.subheader(continent)
-
 df = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv')
 
 # supprimer '.' et espaces de la colonne continent
@@ -28,6 +26,8 @@ continent = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US
 
 df_continent = df.loc[df.continent == continent]
 
+st.subheader(continent)
+
 # pivot table for mean by hp evolution
 pt = pd.pivot_table(df_continent, index = 'year', values = 'hp', aggfunc = 'mean')
 pt['year'] = pt.index
@@ -43,6 +43,8 @@ st.pyplot(viz.figure)
 continent_1 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
 
 df_continent_1 = df.loc[df.continent == continent_1]
+
+st.subheader(continent_1)
 
 # pivot table for mean by cubicinches evolution
 pt_1 = pd.pivot_table(df_continent_1, index = 'year', values = 'cubicinches', aggfunc = 'mean')
@@ -60,6 +62,8 @@ continent_2 = st.selectbox(label = 'Choisi un continent', options = ('Europe', '
 
 df_continent_2 = df.loc[df.continent == continent_2]
 
+st.subheader(continent_2)
+
 # pivot table for mean by weightlbs evolution
 pt_2 = pd.pivot_table(df_continent_2, index = 'year', values = 'weightlbs', aggfunc = 'mean')
 pt_2['year'] = pt.index
@@ -75,6 +79,8 @@ st.pyplot(viz_2.figure)
 continent_3 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
 
 df_continent_3 = df.loc[df.continent == continent_3]
+
+st.subheader(continent_3)
 
 # pivot table for mean by time-to-60 evolution
 pt_3 = pd.pivot_table(df_continent_3, index = 'year', values = 'time-to-60', aggfunc = 'mean')
