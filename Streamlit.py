@@ -1,8 +1,9 @@
 import pandas as pd
 import seaborn as sns
 import numpy as np
+import streamlit as st
 
-st.title("Analyse sur l'évolution des performances mécanique par continent", anchor=None)
+st.title("Analyse sur l'évolution des performances mécanique par continent")
 
 continent = st.selectbox(label = 'Choisi un pays', options = (' Europe.', ' US.', ' Japan.'))
 
