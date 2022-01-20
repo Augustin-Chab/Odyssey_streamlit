@@ -7,6 +7,8 @@ st.title("Analyse sur l'évolution des performances mécanique par continent", a
 
 continent = st.selectbox(label = 'Choisi un pays', (' Europe.', ' US.', ' Japan.'))
 
+st.write('You selected:', option)
+
 st.subheader(continent)
 
 
