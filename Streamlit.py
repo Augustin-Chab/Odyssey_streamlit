@@ -28,10 +28,10 @@ pt = pd.pivot_table(df, index = 'year', values = 'hp', aggfunc = 'mean')
 pt['year'] = pt.index
 
 # Evolution de la puissance moyenne du moteur
-viz = (sns.set()
+sns.set()
 plt.figure(figsize = (20, 10))
-sns.barplot(data = pt, x = pt.year, y = pt.hp, color ="blue")
-plt.title('Evolution de la puissance moyenne du moteur', size = 20))
+plt.title('Evolution de la puissance moyenne du moteur', size = 20)
+viz = sns.barplot(data = pt, x = pt.year, y = pt.hp, color ="blue")
 
 st.pyplot(viz.figure)
 
