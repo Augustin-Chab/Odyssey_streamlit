@@ -6,10 +6,9 @@ import matplotlib.pyplot as plt
 
 st.title("Analyse sur l'évolution des performances mécanique par continent")
 
-continent = st.selectbox(label = 'Choisi un pays', options = (' Europe.', ' US.', ' Japan.'))
+continent = st.selectbox(label = 'Choisi un continent', options = (' Europe.', ' US.', ' Japan.'))
 
 st.subheader(continent)
-
 
 df = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv')
 
