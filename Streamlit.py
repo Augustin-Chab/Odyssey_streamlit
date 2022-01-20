@@ -64,7 +64,7 @@ pt_2['year'] = pt.index
 sns.set()
 plt.figure(figsize = (20, 10))
 plt.title('Evolution du poids moyen', size = 20)
-viz_2 = sns.barplot(data = pt_2, x = pt_2.year, y = pt_2.weightlbs, ccolor = "steelblue")
+viz_2 = sns.barplot(data = pt_2, x = pt_2.year, y = pt_2.weightlbs, color = "steelblue")
 
 st.pyplot(viz_2.figure)
 
