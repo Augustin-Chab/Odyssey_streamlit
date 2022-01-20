@@ -17,9 +17,8 @@ df_continent = df.loc[df.continent == continent]
 st.subheader('Heatmap')
 
 # display heatmap
-viz_correlation = (mask = np.triu(np.ones_like(df.corr())) 
-                   plt.figure(figsize = (20, 10)) 
-                   sns.heatmap(df.corr(), center = 0, cmap = "vlag", annot=True, vmin = -1, vmax = 1, mask = mask))
+viz_correlation = (plt.figure(figsize = (20, 10)) 
+                   sns.heatmap(df.corr(), center = 0, cmap = "vlag", annot=True, vmin = -1, vmax = 1, mask = np.triu(np.ones_like(df.corr()))))
 
 st.pyplot(viz_correlation.figure)
 
