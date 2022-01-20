@@ -42,14 +42,10 @@ viz = sns.barplot(data = pt, x = pt.year, y = pt.hp, color = "steelblue")
 
 st.pyplot(viz.figure)
 
-continent_1 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'), key = 1)
-
-df_continent_1 = df.loc[df.continent == continent_1]
-
-st.subheader(continent_1)
+st.subheader(continent)
 
 # pivot table for mean by cubicinches evolution
-pt_1 = pd.pivot_table(df_continent_1, index = 'year', values = 'cubicinches', aggfunc = 'mean')
+pt_1 = pd.pivot_table(df_continent, index = 'year', values = 'cubicinches', aggfunc = 'mean')
 pt_1['year'] = pt.index
 
 # Evolution de la cylindré moyenne 
@@ -60,14 +56,10 @@ viz_1 = sns.barplot(data = pt_1, x = pt.year, y = pt_1.cubicinches, color = "ste
 
 st.pyplot(viz_1.figure)
 
-continent_2 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'), key = 2)
-
-df_continent_2 = df.loc[df.continent == continent_2]
-
-st.subheader(continent_2)
+st.subheader(continent)
 
 # pivot table for mean by weightlbs evolution
-pt_2 = pd.pivot_table(df_continent_2, index = 'year', values = 'weightlbs', aggfunc = 'mean')
+pt_2 = pd.pivot_table(df_continent, index = 'year', values = 'weightlbs', aggfunc = 'mean')
 pt_2['year'] = pt.index
 
 # Evolution du poids moyen
@@ -78,14 +70,10 @@ viz_2 = sns.barplot(data = pt_2, x = pt.year, y = pt_2.weightlbs, ccolor = "stee
 
 st.pyplot(viz_2.figure)
 
-continent_3 = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'), key = 3)
-
-df_continent_3 = df.loc[df.continent == continent_3]
-
-st.subheader(continent_3)
+st.subheader(continent)
 
 # pivot table for mean by time-to-60 evolution
-pt_3 = pd.pivot_table(df_continent_3, index = 'year', values = 'time-to-60', aggfunc = 'mean')
+pt_3 = pd.pivot_table(df_continent, index = 'year', values = 'time-to-60', aggfunc = 'mean')
 pt_3['year'] = pt.index
 
 # Evolution du time to 60 moyen
