@@ -3,8 +3,6 @@ import seaborn as sns
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly
 
 st.title("Analyse sur l'évolution des performances mécanique par continent")
 
