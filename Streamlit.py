@@ -29,7 +29,7 @@ if len(continent) == 0:
 else:
   df_continent = df.loc[((df.continent.isin(continent)))]
 
-  st.subheader(' '.join(continent))
+  st.subheader(', '.join(continent))
 
   # pivot table for mean by hp evolution
   pt = pd.pivot_table(df_continent, index = 'year', values = 'hp', aggfunc = 'mean')
