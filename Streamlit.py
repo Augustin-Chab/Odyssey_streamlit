@@ -26,7 +26,9 @@ st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas d'évolution signif
 
 continent = st.multiselect(label = 'Choisi un continent', options = ['Europe', 'US', 'Japan'])
 
-df_continent = df.loc[df.continent == continent]
+#df_continent = df.loc[df.continent == continent]
+
+df_continent = df.loc[((df.continent.isin(continent)))]
 
 st.subheader(continent)
 
