@@ -30,7 +30,7 @@ continent = st.multiselect(label = 'Choisi un continent', options = ['Europe', '
 
 df_continent = df.loc[((df.continent.isin(continent)))]
 
-st.subheader(continent)
+st.subheader(continent[:])
 
 # pivot table for mean by hp evolution
 pt = pd.pivot_table(df_continent, index = 'year', values = 'hp', aggfunc = 'mean')
