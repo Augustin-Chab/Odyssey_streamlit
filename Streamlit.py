@@ -4,7 +4,7 @@ import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.title("Analyse sur l'évolution des performances mécanique par continent")
+st.title("Analyse de l'évolution des performances mécanique par continent")
 
 df = pd.read_csv('https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv')
 
@@ -20,7 +20,7 @@ viz_correlation = sns.heatmap(df.corr(), center = 0, cmap = "vlag", annot=True, 
 st.pyplot(viz_correlation.figure)
 
 st.subheader('Analyse de la corrélation')
-st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas de corrélation significative concernant l'évolution du nombre de cylindre, la puissance de la cylindré, la puissance du moteur (hp) et le time-to-60. Concretement, il n'y a aps d'évolution ordonnée de tous ces paramètres entre 1971 et 1983 En revanche")
+st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas de corrélation significative concernant l'évolution du nombre de cylindre, la puissance de la cylindré, la puissance du moteur (hp) et le time-to-60. Concretement, il n'y a aps d'évolution ordonnée de tous ces paramètres entre 1971 et 1983 En revanche (toutes années confondues), il y a une corrélation, positive, forte, évidente entre le poids, la puissance du moteur et la cylindré.")
 
 continent = st.multiselect(label = 'Choisi un continent', options = ['Europe', 'US', 'Japan'])
 
