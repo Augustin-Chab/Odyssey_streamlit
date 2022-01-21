@@ -44,7 +44,7 @@ viz = sns.barplot(data = pt, x = pt.year, y = pt.hp, color = "steelblue")
 
 st.pyplot(viz.figure)
 
-st.subheader(continent)
+st.subheader(' '.join(continent))
 
 # pivot table for mean by cubicinches evolution
 pt_1 = pd.pivot_table(df_continent, index = 'year', values = 'cubicinches', aggfunc = 'mean')
@@ -58,7 +58,7 @@ viz_1 = sns.barplot(data = pt_1, x = pt_1.year, y = pt_1.cubicinches, color = "s
 
 st.pyplot(viz_1.figure)
 
-st.subheader(continent)
+st.subheader(' '.join(continent))
 
 # pivot table for mean by weightlbs evolution
 pt_2 = pd.pivot_table(df_continent, index = 'year', values = 'weightlbs', aggfunc = 'mean')
@@ -72,7 +72,7 @@ viz_2 = sns.barplot(data = pt_2, x = pt_2.year, y = pt_2.weightlbs, color = "ste
 
 st.pyplot(viz_2.figure)
 
-st.subheader(continent)
+st.subheader(' '.join(continent))
 
 # pivot table for mean by time-to-60 evolution
 pt_3 = pd.pivot_table(df_continent, index = 'year', values = 'time-to-60', aggfunc = 'mean')
