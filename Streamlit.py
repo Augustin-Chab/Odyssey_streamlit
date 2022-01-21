@@ -22,7 +22,9 @@ st.pyplot(viz_correlation.figure)
 st.subheader('Analyse de la corrélation')
 st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas d'évolution significative sur le nombre de cylindre, la cylindré, et la puissance du moteur (hp). En revanche")
 
-continent = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
+#continent = st.selectbox(label = 'Choisi un continent', options = ('Europe', 'US', 'Japan'))
+
+continent = st.multiselect(label = 'Choisi un continent', options = ['Europe', 'US', 'Japan'])
 
 df_continent = df.loc[df.continent == continent]
 
