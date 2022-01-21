@@ -20,7 +20,7 @@ viz_correlation = sns.heatmap(df.corr(), center = 0, cmap = "vlag", annot=True, 
 st.pyplot(viz_correlation.figure)
 
 st.subheader('Analyse de la corrélation')
-st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas d'évolution significative sur le nombre de cylindre, la cylindré, et la puissance du moteur (hp). En revanche")
+st.markdown("On constate qu'entre 1971 et 1983, il n'y a pas de corrélation significative concernant l'évolution du nombre de cylindre, la puissance de la cylindré, la puissance du moteur (hp) et le time-to-60. Concretement, il n'y a aps d'évolution ordonnée de tous ces paramètres entre 1971 et 1983 En revanche")
 
 continent = st.multiselect(label = 'Choisi un continent', options = ['Europe', 'US', 'Japan'])
 
